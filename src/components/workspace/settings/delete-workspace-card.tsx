@@ -29,6 +29,11 @@ const DeleteWorkspaceCard = () => {
         queryClient.invalidateQueries({
           queryKey: ["userWorkspaces"],
         });
+        toast({
+          title: "Success",
+          description: data.message,
+          variant: "success",
+        });
         navigate(`/workspace/${data.currentWorkspace}`);
         setTimeout(() => onCloseDialog(), 100);
       },

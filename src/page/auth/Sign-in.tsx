@@ -166,6 +166,11 @@ const SignIn = () => {
                         Login
                       </Button>
                     </div>
+                    <div>
+                      Guest Email: guest@email.com
+                      <br></br>
+                      Guest Password: password
+                    </div>
                     <div className="text-center text-sm">
                       Don&apos;t have an account?{" "}
                       <Link

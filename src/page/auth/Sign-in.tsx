@@ -166,7 +166,7 @@ const SignIn = () => {
                         Login
                       </Button>
                     </div>
-                    <div>
+                    <div className="text-sm">
                       Guest Email: guest@email.com
                       <br></br>
                       Guest Password: password

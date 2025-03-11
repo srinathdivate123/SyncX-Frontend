@@ -91,7 +91,6 @@ const SignIn = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-xl">Welcome back</CardTitle>
               <CardDescription>
-                Login with your Email or Google account
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -118,7 +117,6 @@ const SignIn = () => {
                               </FormLabel>
                               <FormControl>
                                 <Input
-                                  placeholder="m@example.com"
                                   className="!h-[48px]"
                                   {...field}
                                 />
@@ -143,7 +141,7 @@ const SignIn = () => {
                                   href="#"
                                   className="ml-auto text-sm underline-offset-4 hover:underline"
                                 >
-                                  Forgot your password?
+                                  {/* Forgot your password? */}
                                 </a>
                               </div>
                               <FormControl>
@@ -182,10 +180,6 @@ const SignIn = () => {
               </Form>
             </CardContent>
           </Card>
-          <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary  ">
-            By clicking continue, you agree to our{" "}
-            <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
-          </div>
         </div>
       </div>
     </div>

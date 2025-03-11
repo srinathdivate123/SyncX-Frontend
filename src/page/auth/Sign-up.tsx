@@ -85,7 +85,6 @@ const SignUp = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-xl">Create an account</CardTitle>
               <CardDescription>
-                Signup with your Email or Google account
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -112,7 +111,6 @@ const SignUp = () => {
                               </FormLabel>
                               <FormControl>
                                 <Input
-                                  placeholder="Joh Doe"
                                   className="!h-[48px]"
                                   {...field}
                                 />
@@ -134,7 +132,6 @@ const SignUp = () => {
                               </FormLabel>
                               <FormControl>
                                 <Input
-                                  placeholder="m@example.com"
                                   className="!h-[48px]"
                                   {...field}
                                 />
@@ -187,10 +184,6 @@ const SignUp = () => {
               </Form>
             </CardContent>
           </Card>
-          <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary  ">
-            By clicking continue, you agree to our{" "}
-            <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
-          </div>
         </div>
       </div>
     </div>

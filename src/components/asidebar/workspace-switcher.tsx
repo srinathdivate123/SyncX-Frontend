@@ -92,13 +92,12 @@ export function WorkspaceSwitcher() {
                       <span className="truncate font-semibold">
                         {activeWorkspace?.name}
                       </span>
-                      <span className="truncate text-xs">Free</span>
                     </div>
                   </>
                 ) : (
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-semibold">
-                      No Workspace selected
+                      No Workspaces found
                     </span>
                   </div>
                 )}

@@ -60,10 +60,18 @@ const Asidebar = () => {
           <SidebarGroup className="!py-0">
             <SidebarGroupContent>
               <WorkspaceSwitcher />
-              <Separator />
-              <NavMain />
-              <Separator />
-              <NavProjects />
+              {workspaceId != 'null' ? (
+                <div>
+                  <Separator />
+                  <NavMain />
+                  <Separator />
+                  <NavProjects />
+                </div>
+              ) : (
+                <div></div>
+                
+              )}
+
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>

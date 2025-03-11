@@ -120,7 +120,7 @@ export function NavProjects() {
           </PermissionsGuard>
         </SidebarGroupLabel>
         <SidebarMenu className="h-[320px] scrollbar overflow-y-auto pb-2">
-          {isError ? <div>Error occured</div> : null}
+          {isError ? null : null}
           {isPending ? (
             <Loader
               className=" w-5 h-5
@@ -132,7 +132,7 @@ export function NavProjects() {
           {!isPending && projects?.length === 0 ? (
             <div className="pl-3">
               <p className="text-xs text-muted-foreground">
-                There is no projects in this Workspace yet. Projects you create
+                There are no projects in this Workspace yet. Projects you create
                 will show up here.
               </p>
               <PermissionsGuard requiredPermission={Permissions.CREATE_PROJECT}>

@@ -19,7 +19,6 @@ const WorkspaceHeader = () => {
             <span className="truncate font-semibold text-xl">
               {workspace?.name}
             </span>
-            <span className="truncate text-sm">Free</span>
           </div>
         </div>
       )}

@@ -36,12 +36,17 @@ const InviteMember = () => {
   return (
     <div className="flex flex-col pt-0.5 px-0 ">
       <h5 className="text-lg  leading-[30px] font-semibold mb-1">
-              Invite members to join you
-            </h5>
-            <p className="text-sm text-muted-foreground leading-tight">
-              Anyone with an invite link can join this free Workspace. You can also
-              disable and create a new invite link for this Workspace at any time.
-            </p>
+        Invite members to join you
+      </h5>
+
+      <p className="text-sm text-muted-foreground">
+        Workspace members can view and all projects, tasks
+        and create new tasks in the Workspace.
+      </p>
+      <br></br>
+      <p className="text-sm text-muted-foreground leading-tight">
+        Share the below invite link with your team to let them join this Workspace.
+      </p>
       <PermissionsGuard showMessage requiredPermission={Permissions.ADD_MEMBER}>
         {workspaceLoading ? (
           <Loader
@@ -52,7 +57,7 @@ const InviteMember = () => {
           />
         ) : (
           <div >
-            
+
             <div className="flex py-3 gap-2">
 
               <Label htmlFor="link" className="sr-only">

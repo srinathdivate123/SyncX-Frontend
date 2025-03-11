@@ -31,7 +31,7 @@ export const loginMutationFn = async (
   const response = await API.post("/auth/login", data);
   return response.data;
 };
- 
+  
 export const registerMutationFn = async (data: registerType) =>
   await API.post("/auth/register", data);
 
@@ -70,7 +70,7 @@ export const getAllWorkspacesUserIsMemberQueryFn =
 export const getWorkspaceByIdQueryFn = async (
   workspaceId: string
 ): Promise<WorkspaceByIdResponseType> => {
-  const response = await API.get(`/workspace/${workspaceId}`);
+  const response = await API.get(`/workspace/${workspaceId}`);  
   return response.data;
 };
 

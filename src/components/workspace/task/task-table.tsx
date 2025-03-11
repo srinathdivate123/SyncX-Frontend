@@ -73,30 +73,43 @@ const TaskTable = () => {
     setPageSize(size);
   };
 
-  return (
-    <div className="w-full relative">
-      <DataTable
-        isLoading={isLoading}
-        data={tasks}
-        columns={columns}
-        onPageChange={handlePageChange}
-        onPageSizeChange={handlePageSizeChange}
-        pagination={{
-          totalCount,
-          pageNumber,
-          pageSize,
-        }}
-        filtersToolbar={
-          <DataTableFilterToolbar
-            isLoading={isLoading}
-            projectId={projectId}
-            filters={filters}
-            setFilters={setFilters}
-          />
-        }
-      />
-    </div>
-  );
+  
+  if (tasks.length) {
+    return (
+      <div className="w-full relative">
+        <DataTable
+          isLoading={isLoading}
+          data={tasks}
+          columns={columns}
+          onPageChange={handlePageChange}
+          onPageSizeChange={handlePageSizeChange}
+          pagination={{
+            totalCount,
+            pageNumber,
+            pageSize,
+          }}
+          filtersToolbar={
+            <DataTableFilterToolbar
+              isLoading={isLoading}
+              projectId={projectId}
+              filters={filters}
+              setFilters={setFilters}
+            />
+          }
+        />
+      </div>
+    );
+  }
+  else {
+    return (
+      <div>
+        <p className="text-muted-foreground">
+          Create tasks to see them here!
+        </p>
+      </div>
+    )
+  }
+
 };
 
 const DataTableFilterToolbar: FC<DataTableFilterToolbarProps> = ({
@@ -212,24 +225,24 @@ const DataTableFilterToolbar: FC<DataTableFilterToolbarProps> = ({
       {Object.values(filters).some(
         (value) => value !== null && value !== ""
       ) && (
-        <Button
-          disabled={isLoading}
-          variant="ghost"
-          className="h-8 px-2 lg:px-3"
-          onClick={() =>
-            setFilters({
-              keyword: null,
-              status: null,
-              priority: null,
-              projectId: null,
-              assigneeId: null,
-            })
-          }
-        >
-          Reset
-          <X />
-        </Button>
-      )}
+          <Button
+            disabled={isLoading}
+            variant="ghost"
+            className="h-8 px-2 lg:px-3"
+            onClick={() =>
+              setFilters({
+                keyword: null,
+                status: null,
+                priority: null,
+                projectId: null,
+                assigneeId: null,
+              })
+            }
+          >
+            Reset
+            <X />
+          </Button>
+        )}
     </div>
   );
 };

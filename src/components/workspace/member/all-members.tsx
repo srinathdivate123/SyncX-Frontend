@@ -73,7 +73,11 @@ const AllMembers = () => {
   };
 
   return (
+    
     <div className="grid gap-6 pt-2">
+      <h5 className="text-lg  leading-[30px] font-semibold mb-1">
+        Existimg Members
+      </h5>
       {isPending ? (
         <Loader className="w-8 h-8 animate-spin place-self-center flex" />
       ) : null}

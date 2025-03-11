@@ -97,14 +97,11 @@ export default function CreateWorkspaceForm({
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Taco's Co."
+                        placeholder="Enter an eye catching name!"
                         className="!h-[48px]"
                         {...field}
                       />
                     </FormControl>
-                    <FormDescription>
-                      This is the name of your company, team or organization.
-                    </FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -125,14 +122,10 @@ export default function CreateWorkspaceForm({
                     <FormControl>
                       <Textarea
                         rows={6}
-                        placeholder="Our team organizes marketing projects and tasks here."
+                        placeholder="Enter a description for your team members to understadn about this workspace"
                         {...field}
                       />
                     </FormControl>
-                    <FormDescription>
-                      Get your members on board with a few words about your
-                      Workspace.
-                    </FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}

@@ -64,10 +64,10 @@ const LogoutDialog = (props: {
           <DialogFooter>
             <Button disabled={isPending} type="button" onClick={handleLogout}>
               {isPending && <Loader className="animate-spin" />}
-              Sign out
+              Yes
             </Button>
             <Button type="button" onClick={() => setIsOpen(false)}>
-              Cancel
+              No
             </Button>
           </DialogFooter>
         </DialogContent>

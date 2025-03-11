@@ -108,7 +108,7 @@ export default function EditWorkspaceForm() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Taco's Co."
+                        placeholder="Enter an eye catching name!"
                         className="!h-[48px] disabled:opacity-90 disabled:pointer-events-none"
                         disabled={!canEditWorkspace}
                         {...field}
@@ -136,7 +136,7 @@ export default function EditWorkspaceForm() {
                         rows={6}
                         disabled={!canEditWorkspace}
                         className="disabled:opacity-90 disabled:pointer-events-none"
-                        placeholder="Our team organizes marketing projects and tasks here."
+                        placeholder="Enter a description for your team members to understadn about this workspace"
                         {...field}
                       />
                     </FormControl>

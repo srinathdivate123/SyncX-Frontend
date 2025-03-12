@@ -74,7 +74,7 @@ const TaskTable = () => {
   };
 
   
-  if (tasks.length) {
+  if (tasks.length !== 0) {
     return (
       <div className="w-full relative">
         <DataTable
@@ -100,11 +100,12 @@ const TaskTable = () => {
       </div>
     );
   }
-  else {
+
+  if (tasks.length == 0) {
     return (
       <div>
         <p className="text-muted-foreground">
-          Create tasks to see them here!
+          Tasks created by you for this project will appear here!
         </p>
       </div>
     )

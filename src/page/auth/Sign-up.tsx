@@ -57,6 +57,11 @@ const SignUp = () => {
     if (isPending) return;
     mutate(values, {
       onSuccess: () => {
+        toast({
+          title: "Success",
+          description: "Your sign-up was successful. You can login now!",
+          variant: "success",
+        });
         navigate("/");
       },
       onError: (error) => {

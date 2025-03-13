@@ -39,8 +39,8 @@ const SignUp = () => {
     email: z.string().trim().email("Invalid email address").min(1, {
       message: "Workspace name is required",
     }),
-    password: z.string().trim().min(1, {
-      message: "Password is required",
+    password: z.string().trim().min(6, {
+      message: "Enter a password atleast 6 characters long",
     }),
   });
 
